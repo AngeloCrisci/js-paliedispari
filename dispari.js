@@ -4,7 +4,7 @@ console.log('JS OK')
 
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 
-const userNumber = prompt('Dammi un numero da 1 a 5')
+const userNumber = prompt(parseInt)('Dammi un numero da 1 a 5')
 const userChoice = prompt('Pari o Dispari')
 
 // Generiamo un numero random(sempre da 1 a 5) per il computer(usando una funzione).
@@ -21,5 +21,8 @@ function getRandonNumber(min = 1, max = 5, isMaxIncluded = true){
     }
 
     if(isMaxIncluded) max++;
-    return Math.floor(Math.random() * (max - min) - min);
+    return Math.floor(Math.random() * (max - min) + min);
 }
+
+const addNumber = userNumber + getRandonNumber();
+
